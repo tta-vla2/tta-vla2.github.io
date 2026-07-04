@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3273b7" />
+    <meta name="msapplication-TileColor" content="#3273b7" />
+
+    <title>TTA-VLA</title>
+
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="static/images/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://ajax.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
+
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script defer src="static/js/bulma-carousel.min.js"></script>
+    <script defer src="static/js/bulma-slider.min.js"></script>
+    <script defer src="static/js/index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C00NF99PVH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-C00NF99PVH');
+    </script>
+  </head>
+
+  <body>
+    <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <main id="main-content">
+      <nav class="page-nav" aria-label="Page navigation">
+        <div class="page-nav-inner">
+          <a href="#overview" class="page-nav-link active">Overview</a>
+          <a href="#motivation" class="page-nav-link">Motivation</a>
+          <a href="#framework" class="page-nav-link">Framework</a>
+          <a href="#method" class="page-nav-link">Method</a>
+          <a href="#experiments" class="page-nav-link">Experiments</a>
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <section class="hero publication-header">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column has-text-centered">
+                <div class="title-wide">
+                  <h1 class="title is-1 publication-title">
+                    Can Vision-Language-Action Models Adapt to<br />
+                    Visual Perturbations Using a Test-Time Trajectory?
+                  </h1>
+                </div>
+
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><a href="https://jiho-lee-page.github.io/" target="_blank" rel="noopener noreferrer">Jiho Lee</a>,</span>
+                  <span class="author-block"><a href="https://scholar.google.com/citations?user=IoJi1pEAAAAJ&amp;hl=ko&amp;oi=sra" target="_blank" rel="noopener noreferrer">Heayoun Choi</a>,</span>
+                  <span class="author-block"><a href="https://airlab.cau.ac.kr/members/professor/" target="_blank" rel="noopener noreferrer">Eunwoo Kim</a></span>
+                </div>
+
+                <div class="is-size-5 publication-affiliations">
+                  <span class="author-block">Chung-Ang University</span>
+                </div>
+
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="./assets/tta-vla_paper.pdf" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-alt"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://tta-vla.github.io" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
+
+                <div class="publication-keywords">
+                  <span class="keyword-label">Keywords:</span>
+                  <span class="keyword-tag">Vision-Language-Action Models</span>
+                  <span class="keyword-tag">Test-Time Adaptation</span>
+                </div>
+
+                <div class="summary-box">
+                  <span class="summary-label">In brief</span>
+                  <p>
+                    <b>TTA-VLA</b> introduces a test-time trajectory-based adaptation framework for vision-language-action models that restores visual–action alignment under unseen visual perturbations while preserving task semantics.
+                  </p>
+                  <div class="summary-figure-card">
+                    <img
+                      src="./assets/tta-vla_framework.png"
+                      alt="Overview of sparse feature unlearning"
+                      class="summary-image"
+                    />
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview -->
+      <section class="hero is-small is-light" id="overview">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <div class="publication-video">
+                  <video controls muted loop playsinline preload="metadata">
+                    <source src="./assets/tta-vla_video.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified readable-content">
+              <p>
+                Recently, vision–language–action models (VLAs) have shown strong generalization across diverse robotic tasks.
+                However, when deployed in new environments with unseen visual conditions, their performance often degrades due to visual distribution shifts.
+                Such shifts disrupt the alignment between visual and action representations, leading to distorted action semantics at test-time.
+                Existing approaches primarily address this issue by scaling multi-modal training data or incorporating reasoning mechanisms.
+                However, they require substantial data collection and computational resources, limiting their practicality for various real-world deployments.
+              </p>
+
+              <p>
+                To address this challenge, we propose <b>TTA-VLA</b>, a simple yet effective test-time adaptation framework for VLAs using only a test-time trajectory.
+                Our method leverages environment-specific observations from this trajectory as self-supervision signals for adaptation.
+                Based on these observations, we extract visual and action embedding transitions from a pre-trained VLA and align them to reduce visual–action temporal inconsistencies induced by unseen visual shifts.
+                To preserve task semantics in the representations under visual distribution shifts, we introduce a language-conditioned reference that grounds visual–action transition features in the task instruction, providing an environment-invariant anchor.
+              </p>
+
+              <p>
+                Across various visual perturbation scenarios on benchmark and real-world experiments, our method achieves an average success rate improvement of 24% over the pre-trained policies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Motivation -->
+      <section class="section motivation-section" id="motivation">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3">Motivation</h2>
+
+          <div class="motivation-takeaway">
+            VLAs struggle under visual perturbations.
+          </div>
+
+          <figure class="figure-container motivation-figure">
+            <img src="./assets/tta-vla_motivation.png" loading="lazy" class="center-img motivation-img" alt="Examples of visual perturbations that degrade VLA performance" />
+          </figure>
+
+          <div class="content has-text-justified readable-content motivation-text">
+            <p>
+              Vision-language-action models can generalize across diverse manipulation tasks, but their performance can significantly degrade when visual conditions at deployment differ from those seen during training.
+              Changes in background texture, camera viewpoint, lighting, robot initial state, sensor noise, or object layout can disrupt the visual-action grounding required for reliable execution.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Framework -->
+      <section class="section section-light" id="framework">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 section-title">Framework</h2>
+
+          <div class="takeaway-box framework-takeaway">
+            <span class="takeaway-label">Key idea</span>
+            <p>
+              Adaptation using environment-specific observations available at test time <b>(test-time trajectory)</b>.
+            </p>
+          </div>
+
+          <figure class="figure-container overview-figure">
+            <img src="./assets/tta-vla_framework.png" loading="lazy" class="center-img overview-img" alt="Overview of the TTA-VLA framework" />
+          </figure>
+
+          <div class="framework-cards">
+            <div class="framework-card">
+              <div class="card-index">01</div>
+              <h4>Test-time trajectory</h4>
+              <p>The robot collects observations from the shifted environment at test-time.</p>
+            </div>
+
+            <div class="framework-card">
+              <div class="card-index">02</div>
+              <h4>Self-supervised adaptation</h4>
+              <p>The collected trajectory provides supervision for adapting the VLA without expert supervision.</p>
+            </div>
+
+            <div class="framework-card">
+              <div class="card-index">03</div>
+              <h4>Visual–action consistency</h4>
+              <p>The adapted model restores the visual–action correspondence disrupted by visual perturbations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Method -->
+      <section class="section" id="method">
+        <div class="container is-max-desktop">
+          <h2 class="title is-3 section-title">Method</h2>
+          <p class="method-subtitle">
+            <b>TTA-VLA</b>: <b>T</b>est-time <b>T</b>rajectory-based <b>A</b>daptation for <b>V</b>ision-<b>L</b>anguage-<b>A</b>ction models
+          </p>
+
+          <div class="method-takeaway">
+            <p>
+              Alignment of <b>visual and action transitions</b> while using the <b>task instruction</b> to preserve semantic consistency.
+            </p>
+          </div>
+
+          <div class="figure-card method-card">
+            <figure class="figure-container method-figure">
+              <img src="./assets/tta-vla_method.png" loading="lazy" class="center-img method-img" alt="Detailed method diagram of TTA-VLA" />
+            </figure>
+          </div>
+
+          <div class="method-bullets">
+            <div class="method-bullet">
+              <span class="bullet-index">1</span>
+              <div>
+                <h4>Extract transitions</h4>
+                <p>Compute visual and action feature changes from consecutive steps in the test-time trajectory.</p>
+              </div>
+            </div>
+
+            <div class="method-bullet">
+              <span class="bullet-index">2</span>
+              <div>
+                <h4>Align visual–action changes</h4>
+                <p>Reduce inconsistencies between visual transitions and action transitions caused by visual perturbations.</p>
+              </div>
+            </div>
+
+            <div class="method-bullet">
+              <span class="bullet-index">3</span>
+              <div>
+                <h4>Anchor with language</h4>
+                <p>Use the task instruction as a semantic reference to keep the adapted representation task-relevant.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiments -->
+      <section class="section section-light" id="experiments">
+        <div class="container is-max-widescreen">
+          <h2 class="title is-3">Experiment videos</h2>
+
+          <div class="experiment-row">
+            <h3 class="experiment-title">Benchmark</h3>
+
+            <div class="experiment-grid benchmark-grid">
+              <div class="experiment-video">
+                <video controls muted loop preload="metadata">
+                  <source src="./assets/tta-vla_bench_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="experiment-video">
+                <video controls muted loop preload="metadata">
+                  <source src="./assets/tta-vla_bench_2.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="experiment-video">
+                <video controls muted loop preload="metadata">
+                  <source src="./assets/tta-vla_bench_3.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="experiment-row">
+            <h3 class="experiment-title">Real-world</h3>
+
+            <div class="experiment-grid">
+              <div class="experiment-video">
+                <video controls muted loop preload="metadata">
+                  <source src="./assets/tta-vla_real_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+
+              <div class="experiment-video">
+                <video controls muted loop preload="metadata">
+                  <source src="./assets/tta-vla_real_2.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BibTeX -->
+      <section class="section" id="bibtex">
+        <div class="container is-max-desktop content">
+          <div class="bibtex-header">
+            <h2 class="title is-3">BibTeX</h2>
+            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard" type="button">
+              <i class="fas fa-copy"></i>
+              <span class="copy-text">Copy</span>
+            </button>
+          </div>
+
+          <pre id="bibtex-code"><code>
+          </code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container is-max-desktop">
+        <div class="content">
+          <p>
+            This page was built using the
+            <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>, adapted from the
+            <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a>
+            project page. This website is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function copyBibTeX() {
+        const bibtex = document.getElementById("bibtex-code").innerText;
+        navigator.clipboard.writeText(bibtex).then(() => {
+          const button = document.querySelector(".copy-bibtex-btn");
+          const label = button.querySelector(".copy-text");
+          const originalText = label.innerText;
+
+          label.innerText = "Copied";
+          button.classList.add("copied");
+
+          setTimeout(() => {
+            label.innerText = originalText;
+            button.classList.remove("copied");
+          }, 1600);
+        });
+      }
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      const scrollButton = document.querySelector(".scroll-to-top");
+      const navLinks = document.querySelectorAll(".page-nav-link");
+      const sections = Array.from(navLinks)
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      function updateActiveNav() {
+        const scrollPosition = window.scrollY + 120;
+        let currentSection = sections[0];
+
+        sections.forEach(section => {
+          if (section.offsetTop <= scrollPosition) {
+            currentSection = section;
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection.id}`) {
+            link.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", () => {
+        if (scrollButton) {
+          scrollButton.classList.toggle("visible", window.scrollY > 300);
+        }
+        updateActiveNav();
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => setTimeout(updateActiveNav, 300));
+      });
+
+      updateActiveNav();
+    </script>
+  </body>
+</html>
