@@ -160,7 +160,15 @@ a:hover {
   font-weight: 800 !important;
   line-height: 1.12 !important;
   letter-spacing: 0.018em;
-  margin-bottom: 1.8rem !important;
+  margin-bottom: 0.7rem !important;
+}
+
+.publication-venue {
+  color: #374151;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.8rem;
 }
 
 .publication-authors,
@@ -791,7 +799,12 @@ code {
   .publication-title {
     font-size: 2.4rem !important;
     line-height: 1.18 !important;
-    margin-bottom: 1.4rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+
+  .publication-venue {
+    font-size: 1.15rem !important;
+    margin-bottom: 1.4rem;
   }
 
   .publication-authors,
